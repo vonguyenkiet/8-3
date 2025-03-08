@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2 đứa lùn</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dog-container {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        animation: jump 1s infinite ease-in-out, fade 2s infinite alternate,
+          spin 3s infinite linear, move 4s infinite alternate ease-in-out;
+      }
+
+      @keyframes jump {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-30px);
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.3;
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes move {
+        0% {
+          transform: translateX(-100px);
+        }
+        100% {
+          transform: translateX(100px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="D:/68cs2/cutecrush-main/cutecrush-main/img/chó.png"
+      alt="Con Chó"
+      class="dog-container"
+    />
+  </body>
+</html>
